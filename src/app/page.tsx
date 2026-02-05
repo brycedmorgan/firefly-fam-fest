@@ -348,6 +348,58 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Festival Map Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <span className="text-amber-500 font-semibold text-sm tracking-wide uppercase">Plan Your Day</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-4">
+              Festival Map
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Find your way around — from bounce houses to food trucks, we've got it all mapped out.
+            </p>
+          </div>
+          
+          <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+            <Image
+              src="/images/event-map.jpg"
+              alt="Firefly Fam Fest Event Map"
+              width={1400}
+              height={1000}
+              className="w-full h-auto"
+            />
+          </div>
+          
+          <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm">
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 rounded bg-blue-500"></div>
+              <span className="text-gray-600">Activities</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 rounded bg-green-600"></div>
+              <span className="text-gray-600">Food & Dining</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 rounded bg-purple-500"></div>
+              <span className="text-gray-600">Vendor Areas</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 rounded bg-yellow-400"></div>
+              <span className="text-gray-600">Entertainment</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 rounded bg-emerald-600"></div>
+              <span className="text-gray-600">Parking</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 rounded bg-pink-400"></div>
+              <span className="text-gray-600">Services</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-6">
