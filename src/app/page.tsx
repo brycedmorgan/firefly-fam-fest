@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { Calendar, MapPin, Clock, Ticket, X, ChevronDown, Check } from 'lucide-react';
 
@@ -12,6 +12,26 @@ export default function HomePage() {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Scroll reveal observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right').forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -207,7 +227,7 @@ export default function HomePage() {
             
             {/* Screen Free Fun / Bounce Houses */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1">
+              <div className="order-2 lg:order-1 scroll-reveal-left">
                 <div className="inline-block px-3 py-1 bg-orange-100 text-orange-600 text-sm font-medium rounded-full mb-4">
                   Requires Activity Ticket
                 </div>
@@ -223,13 +243,13 @@ export default function HomePage() {
                   <li className="flex items-center gap-2"><span className="text-amber-500">•</span> Shaded rest areas for parents</li>
                 </ul>
               </div>
-              <div className="order-1 lg:order-2">
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative">
+              <div className="order-1 lg:order-2 scroll-reveal-right">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative group">
                   <Image
                     src="/images/screen-free-fun.png"
                     alt="Screen free fun with bounce houses"
                     fill
-                    className="object-cover"
+                    className="object-cover ken-burns group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
               </div>
@@ -237,17 +257,17 @@ export default function HomePage() {
 
             {/* Tiny Town */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative">
+              <div className="scroll-reveal-left">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative group">
                   <Image
                     src="/images/tiny-town.png"
                     alt="Tiny Town toddler zone"
                     fill
-                    className="object-cover"
+                    className="object-cover ken-burns group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
               </div>
-              <div>
+              <div className="scroll-reveal-right">
                 <div className="inline-block px-3 py-1 bg-purple-100 text-purple-600 text-sm font-medium rounded-full mb-4">
                   Requires Activity Ticket
                 </div>
@@ -267,7 +287,7 @@ export default function HomePage() {
 
             {/* Food Trucks */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1">
+              <div className="order-2 lg:order-1 scroll-reveal-left">
                 <div className="inline-block px-3 py-1 bg-green-100 text-green-600 text-sm font-medium rounded-full mb-4">
                   Open to All
                 </div>
@@ -283,13 +303,13 @@ export default function HomePage() {
                   <li className="flex items-center gap-2"><span className="text-green-500">•</span> Sweet treats & desserts</li>
                 </ul>
               </div>
-              <div className="order-1 lg:order-2">
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative">
+              <div className="order-1 lg:order-2 scroll-reveal-right">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative group">
                   <Image
                     src="/images/food-trucks.png"
                     alt="Food trucks and delicious treats"
                     fill
-                    className="object-cover"
+                    className="object-cover ken-burns group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
               </div>
@@ -297,17 +317,17 @@ export default function HomePage() {
 
             {/* Live Entertainment */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative">
+              <div className="scroll-reveal-left">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative group">
                   <Image
                     src="/images/entertainment.png"
                     alt="Live entertainment and performers"
                     fill
-                    className="object-cover"
+                    className="object-cover ken-burns group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
               </div>
-              <div>
+              <div className="scroll-reveal-right">
                 <div className="inline-block px-3 py-1 bg-violet-100 text-violet-600 text-sm font-medium rounded-full mb-4">
                   Free — Open to All
                 </div>
@@ -350,14 +370,14 @@ export default function HomePage() {
               { image: '/images/train-rides.jpg', title: 'Firefly Express', desc: 'Trackless train ride through the festival', tag: 'Ticket' },
               { image: '/images/touch-a-truck.jpg', title: 'Touch-a-Truck', desc: 'Climb real fire trucks & more', tag: 'Free' },
             ].map((item, i) => (
-              <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+              <div key={i} className={`scroll-reveal stagger-${i + 1} bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group`}>
                 {item.image ? (
-                  <div className="aspect-[4/3] relative">
+                  <div className="aspect-[4/3] relative overflow-hidden">
                     <Image
                       src={item.image}
                       alt={item.title}
                       fill
-                      className="object-cover"
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
                 ) : (

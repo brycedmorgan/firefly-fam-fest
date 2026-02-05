@@ -140,6 +140,109 @@ section {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
+/* Ken Burns effect - slow zoom/pan */
+@keyframes kenburns {
+  0% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.08) translate(-1%, -1%); }
+  100% { transform: scale(1) translate(0, 0); }
+}
+
+.ken-burns {
+  animation: kenburns 20s ease-in-out infinite;
+}
+
+/* Hover zoom for images */
+.img-zoom {
+  transition: transform 0.5s ease;
+}
+
+.img-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* Card with image zoom on hover */
+.card-hover-zoom .card-image {
+  transition: transform 0.5s ease;
+}
+
+.card-hover-zoom:hover .card-image {
+  transform: scale(1.08);
+}
+
+/* Scroll reveal animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.scroll-reveal {
+  opacity: 0;
+  animation: slideInUp 0.6s ease-out forwards;
+  animation-play-state: paused;
+}
+
+.scroll-reveal.visible {
+  animation-play-state: running;
+}
+
+.scroll-reveal-left {
+  opacity: 0;
+  animation: slideInLeft 0.6s ease-out forwards;
+  animation-play-state: paused;
+}
+
+.scroll-reveal-left.visible {
+  animation-play-state: running;
+}
+
+.scroll-reveal-right {
+  opacity: 0;
+  animation: slideInRight 0.6s ease-out forwards;
+  animation-play-state: paused;
+}
+
+.scroll-reveal-right.visible {
+  animation-play-state: running;
+}
+
+/* Stagger delays for grid items */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+.stagger-7 { animation-delay: 0.7s; }
+.stagger-8 { animation-delay: 0.8s; }
+
 /* Button press effect */
 button:active {
   transform: scale(0.98);
