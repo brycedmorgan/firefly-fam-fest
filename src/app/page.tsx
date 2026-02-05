@@ -164,9 +164,9 @@ export default function HomePage() {
               <div className="space-y-4">
                 {[
                   '5 free activity tickets (bounce houses, train, crafts)',
-                  'Craft punch pass — complete it for a raffle entry to win a family getaway!',
-                  'Exclusive coupons from local vendors',
-                  'Priority entry — no waiting at registration'
+                  '🎨 Craft punch pass — visit every station, enter to win a FAMILY GETAWAY!',
+                  '🚚 Touch-a-Truck punch card — explore all vehicles, win GIANT TONKA TRUCKS!',
+                  'Priority entry — skip the registration line'
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-amber-400 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -361,9 +361,9 @@ export default function HomePage() {
               { image: '/images/balloon-art.png', title: 'Balloon Artists', desc: 'Custom creations for every kid', tag: 'Ticket' },
               { image: '/images/performers.png', title: 'Character Meet & Greet', desc: 'Princesses, superheroes & more', tag: 'Free' },
               { image: '/images/music-singalongs.png', title: 'Music & Singalongs', desc: 'Family-friendly tunes all day', tag: 'Free' },
-              { image: '/images/prizes-raffles.png', title: 'Prizes & Raffles', desc: 'Win a family getaway + giant Tonka trucks!', tag: 'Free' },
-              { image: '/images/train-rides.jpg', title: 'Firefly Express', desc: 'Trackless train ride through the festival', tag: 'Ticket' },
-              { image: '/images/touch-a-truck.jpg', title: 'Touch-a-Truck', desc: 'Climb fire trucks + get punch card for Tonka raffle!', tag: 'Free' },
+              { image: '/images/prizes-raffles.png', title: '🏆 Grand Prizes', desc: 'Craft pass → Family Getaway! Truck pass → Giant Tonka Set!', tag: 'Free' },
+              { image: '/images/train-rides.jpg', title: '🚂 Firefly Express', desc: 'Trackless train ride through the festival grounds', tag: 'Ticket' },
+              { image: '/images/touch-a-truck.jpg', title: '🚒 Touch-a-Truck', desc: 'Climb real vehicles + complete punch card for Tonka raffle!', tag: 'Free' },
             ].map((item, i) => (
               <div key={i} className={`scroll-reveal stagger-${i + 1} bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group`}>
                 <div className="aspect-[4/3] relative overflow-hidden">
