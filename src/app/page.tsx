@@ -41,11 +41,11 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <a href="#" className="flex-shrink-0">
             <Image
-              src="/images/logo.jpg"
+              src="/images/logo.png"
               alt="Firefly Fam Fest"
               width={60}
               height={60}
-              className="h-12 w-auto"
+              className="h-14 w-auto"
             />
           </a>
           <div className="hidden md:flex items-center gap-8">
@@ -76,25 +76,13 @@ export default function HomePage() {
         </div>
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-blue-900/85 to-slate-900/90" />
-        <div className="absolute inset-0 confetti-heavy opacity-20" />
+        <div className="absolute inset-0 confetti-heavy opacity-40" />
         
-        {/* Animated falling confetti */}
+        {/* Animated falling confetti - MORE! */}
         <div className="confetti-animated">
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
-          <div className="confetti-piece" />
+          {[...Array(30)].map((_, i) => (
+            <div key={i} className="confetti-piece" />
+          ))}
         </div>
         
         {/* Floating orbs */}
@@ -102,22 +90,34 @@ export default function HomePage() {
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-pink-500/20 rounded-full blur-3xl" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-          <div className="inline-block mb-6">
-            <span className="bg-white/10 backdrop-blur-sm text-cyan-300 text-sm font-medium px-4 py-2 rounded-full border border-white/10">
-              Grand Opening Event — May 9, 2026
-            </span>
+          {/* BIG Logo */}
+          <div className="mb-8">
+            <Image
+              src="/images/logo.png"
+              alt="Firefly Fam Fest"
+              width={300}
+              height={330}
+              className="mx-auto w-48 md:w-64 lg:w-72 h-auto drop-shadow-2xl"
+            />
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white font-serif mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white font-serif mb-6 leading-tight">
             Utah's Premier<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-pink-500 to-cyan-400">
-              Family Festival
+              Festival for Families
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed">
             An unforgettable day of wonder, play, and togetherness at Eagle Mountain's newest community.
           </p>
+          
+          {/* BIG Date & Time */}
+          <div className="mb-10 bg-white/10 backdrop-blur-sm rounded-2xl p-6 inline-block border border-white/20">
+            <p className="text-3xl md:text-5xl font-bold text-white mb-2">Saturday, May 9, 2026</p>
+            <p className="text-2xl md:text-4xl font-semibold text-amber-400">10 AM – 6 PM</p>
+            <p className="text-lg md:text-xl text-white/80 mt-2">📍 Eagle Mountain, Utah</p>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button 
@@ -135,21 +135,6 @@ export default function HomePage() {
             </a>
           </div>
 
-          {/* Event Details Pills */}
-          <div className="flex flex-wrap justify-center gap-3">
-            <div className="flex items-center gap-2 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
-              <Calendar className="w-4 h-4 text-amber-400" />
-              <span className="text-white/80 text-sm">Saturday, May 9</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
-              <Clock className="w-4 h-4 text-amber-400" />
-              <span className="text-white/80 text-sm">10 AM – 6 PM</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
-              <MapPin className="w-4 h-4 text-amber-400" />
-              <span className="text-white/80 text-sm">Eagle Mountain, UT</span>
-            </div>
-          </div>
         </div>
 
         {/* Scroll indicator */}
@@ -175,7 +160,7 @@ export default function HomePage() {
               <div className="space-y-4">
                 {[
                   '5 free activity tickets (bounce houses, train, crafts)',
-                  'Punch passes for food & treat discounts',
+                  'Craft punch pass — complete it for a raffle entry to win a family getaway!',
                   'Exclusive coupons from local vendors',
                   'Priority entry — no waiting at registration'
                 ].map((item, i) => (
@@ -372,9 +357,9 @@ export default function HomePage() {
               { image: '/images/balloon-art.png', title: 'Balloon Artists', desc: 'Custom creations for every kid', tag: 'Ticket' },
               { image: '/images/performers.png', title: 'Character Meet & Greet', desc: 'Princesses, superheroes & more', tag: 'Free' },
               { image: '/images/music-singalongs.png', title: 'Music & Singalongs', desc: 'Family-friendly tunes all day', tag: 'Free' },
-              { image: '/images/prizes-raffles.png', title: 'Prizes & Raffles', desc: 'Win big throughout the day', tag: 'Free' },
+              { image: '/images/prizes-raffles.png', title: 'Prizes & Raffles', desc: 'Win a family getaway + giant Tonka trucks!', tag: 'Free' },
               { image: '/images/train-rides.jpg', title: 'Firefly Express', desc: 'Trackless train ride through the festival', tag: 'Ticket' },
-              { image: '/images/touch-a-truck.jpg', title: 'Touch-a-Truck', desc: 'Climb real fire trucks & more', tag: 'Free' },
+              { image: '/images/touch-a-truck.jpg', title: 'Touch-a-Truck', desc: 'Climb fire trucks + get punch card for Tonka raffle!', tag: 'Free' },
             ].map((item, i) => (
               <div key={i} className={`scroll-reveal stagger-${i + 1} bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group`}>
                 <div className="aspect-[4/3] relative overflow-hidden">
@@ -510,11 +495,15 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="py-12 bg-slate-900 text-white/60">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="font-bold text-xl text-white">
-              <span className="text-amber-400">Firefly</span> Fam Fest
-            </div>
-            <p className="text-sm text-center md:text-left">
+          <div className="flex flex-col items-center gap-6">
+            <Image
+              src="/images/logo.png"
+              alt="Firefly Fam Fest"
+              width={100}
+              height={110}
+              className="w-20 h-auto"
+            />
+            <p className="text-sm text-center">
               A <a href="https://www.candlelighthomes.com/firefly-vision" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">Candlelight Homes</a> Community Event
             </p>
             <p className="text-sm">© 2026 Firefly Community</p>
@@ -522,10 +511,10 @@ export default function HomePage() {
         </div>
       </footer>
 
-      {/* Registration Modal - Luma Embed Placeholder */}
+      {/* Registration Modal - Luma Embed */}
       {showModal && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white rounded-3xl shadow-2xl max-w-lg w-full p-8 relative max-h-[90vh] overflow-y-auto">
+          <div className="bg-white rounded-3xl shadow-2xl max-w-2xl w-full p-8 relative max-h-[90vh] overflow-y-auto">
             <button 
               onClick={() => setShowModal(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 z-10"
@@ -534,6 +523,13 @@ export default function HomePage() {
             </button>
             
             <div className="text-center mb-6">
+              <Image
+                src="/images/logo.png"
+                alt="Firefly Fam Fest"
+                width={120}
+                height={130}
+                className="mx-auto mb-4"
+              />
               <h3 className="text-2xl font-bold text-gray-900 font-serif mb-2">
                 Register Your Family
               </h3>
@@ -546,7 +542,7 @@ export default function HomePage() {
             <iframe 
               src="https://luma.com/embed/event/evt-wSH7R185vaXhneD/simple"
               width="100%"
-              height="450"
+              height="550"
               frameBorder="0"
               style={{ border: '1px solid #bfcbda88', borderRadius: '12px' }}
               allow="fullscreen; payment"
