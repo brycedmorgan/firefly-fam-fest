@@ -174,7 +174,7 @@ export default function HomePage() {
           {/* Alternating Feature Sections */}
           <div className="space-y-24">
             
-            {/* Bounce Houses */}
+            {/* Screen Free Fun / Bounce Houses */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1">
                 <div className="inline-block px-3 py-1 bg-orange-100 text-orange-600 text-sm font-medium rounded-full mb-4">
@@ -193,8 +193,13 @@ export default function HomePage() {
                 </ul>
               </div>
               <div className="order-1 lg:order-2">
-                <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center text-8xl shadow-xl">
-                  🏰
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative">
+                  <Image
+                    src="/images/screen-free-fun.png"
+                    alt="Screen free fun with bounce houses"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -202,8 +207,13 @@ export default function HomePage() {
             {/* Tiny Town */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-pink-400 to-purple-500 flex items-center justify-center text-8xl shadow-xl">
-                  🧸
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative">
+                  <Image
+                    src="/images/tiny-town.png"
+                    alt="Tiny Town toddler zone"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
               <div>
@@ -224,27 +234,32 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Touch-a-Truck */}
+            {/* Food Trucks */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1">
                 <div className="inline-block px-3 py-1 bg-green-100 text-green-600 text-sm font-medium rounded-full mb-4">
-                  Free — Open to All
+                  Open to All
                 </div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                  Touch-a-Truck Zone
+                  The Munchyard Food Village
                 </h3>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  Climb inside real fire engines, police cars, construction equipment, and more. Meet the heroes who drive them, honk the horns, and create memories that last.
+                  Fuel your fun at our outdoor food truck roundup, offering a tasty mix of savory meals and sweet desserts. Whether you're craving BBQ, tacos, or gourmet treats, there's something for every appetite.
                 </p>
                 <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-center gap-2"><span className="text-green-500">•</span> Fire trucks & ambulances</li>
-                  <li className="flex items-center gap-2"><span className="text-green-500">•</span> Construction vehicles</li>
-                  <li className="flex items-center gap-2"><span className="text-green-500">•</span> Meet local first responders</li>
+                  <li className="flex items-center gap-2"><span className="text-green-500">•</span> 10+ local food trucks</li>
+                  <li className="flex items-center gap-2"><span className="text-green-500">•</span> Shaded seating areas</li>
+                  <li className="flex items-center gap-2"><span className="text-green-500">•</span> Sweet treats & desserts</li>
                 </ul>
               </div>
               <div className="order-1 lg:order-2">
-                <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center text-8xl shadow-xl">
-                  🚒
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative">
+                  <Image
+                    src="/images/food-trucks.png"
+                    alt="Food trucks and delicious treats"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -252,8 +267,13 @@ export default function HomePage() {
             {/* Live Entertainment */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-violet-400 to-indigo-500 flex items-center justify-center text-8xl shadow-xl">
-                  🎪
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative">
+                  <Image
+                    src="/images/entertainment.png"
+                    alt="Live entertainment and performers"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
               <div>
@@ -289,24 +309,39 @@ export default function HomePage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: '🚂', title: 'Firefly Express', desc: 'Trackless train ride through the festival', tag: 'Ticket' },
-              { icon: '🎨', title: 'Craft Stations', desc: 'Kites, windsocks, hats & more to create', tag: 'Ticket' },
-              { icon: '🎭', title: 'Face Painting', desc: 'Professional artists, endless designs', tag: 'Ticket' },
-              { icon: '🎈', title: 'Balloon Artists', desc: 'Custom creations for every kid', tag: 'Ticket' },
-              { icon: '👸', title: 'Character Meet & Greet', desc: 'Princesses, superheroes & more', tag: 'Free' },
-              { icon: '🍔', title: 'Food Truck Village', desc: 'Local favorites & sweet treats', tag: 'Free' },
-              { icon: '🎀', title: 'Grand Opening', desc: 'Ribbon cutting with local leaders', tag: 'Free' },
-              { icon: '🏆', title: 'Raffles & Prizes', desc: 'Win big throughout the day', tag: 'Free' },
+              { image: '/images/crafts-for-kids.png', title: 'Craft Stations', desc: 'Kites, windsocks, hats & more to create', tag: 'Ticket' },
+              { image: '/images/face-painting.png', title: 'Face Painting', desc: 'Professional artists, endless designs', tag: 'Ticket' },
+              { image: '/images/balloon-art.png', title: 'Balloon Artists', desc: 'Custom creations for every kid', tag: 'Ticket' },
+              { image: '/images/performers.png', title: 'Character Meet & Greet', desc: 'Princesses, superheroes & more', tag: 'Free' },
+              { image: '/images/music-singalongs.png', title: 'Music & Singalongs', desc: 'Family-friendly tunes all day', tag: 'Free' },
+              { image: '/images/prizes-raffles.png', title: 'Prizes & Raffles', desc: 'Win big throughout the day', tag: 'Free' },
+              { image: '', icon: '🚂', title: 'Firefly Express', desc: 'Trackless train ride through the festival', tag: 'Ticket' },
+              { image: '', icon: '🚒', title: 'Touch-a-Truck', desc: 'Climb real fire trucks & more', tag: 'Free' },
             ].map((item, i) => (
-              <div key={i} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow">
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-600 mb-3">{item.desc}</p>
-                <span className={`text-xs font-medium px-2 py-1 rounded-full ${
-                  item.tag === 'Free' ? 'bg-green-100 text-green-600' : 'bg-amber-100 text-amber-600'
-                }`}>
-                  {item.tag === 'Free' ? '✓ Free' : '🎟️ Ticket'}
-                </span>
+              <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                {item.image ? (
+                  <div className="aspect-[4/3] relative">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ) : (
+                  <div className="aspect-[4/3] bg-gradient-to-br from-amber-100 to-orange-100 flex items-center justify-center text-6xl">
+                    {item.icon}
+                  </div>
+                )}
+                <div className="p-5">
+                  <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
+                  <p className="text-sm text-gray-600 mb-3">{item.desc}</p>
+                  <span className={`text-xs font-medium px-2 py-1 rounded-full ${
+                    item.tag === 'Free' ? 'bg-green-100 text-green-600' : 'bg-amber-100 text-amber-600'
+                  }`}>
+                    {item.tag === 'Free' ? '✓ Free' : '🎟️ Ticket'}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
