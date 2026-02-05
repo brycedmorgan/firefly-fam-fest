@@ -453,12 +453,26 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <section id="register" className="py-24 bg-white">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 font-serif mb-6">
+      <section id="register" className="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Animated confetti */}
+        <div className="confetti-animated">
+          <div className="confetti-piece" />
+          <div className="confetti-piece" />
+          <div className="confetti-piece" />
+          <div className="confetti-piece" />
+          <div className="confetti-piece" />
+          <div className="confetti-piece" />
+          <div className="confetti-piece" />
+          <div className="confetti-piece" />
+          <div className="confetti-piece" />
+          <div className="confetti-piece" />
+        </div>
+        <div className="absolute inset-0 confetti-heavy opacity-25" />
+        <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold text-white font-serif mb-6">
             Ready for the Best Day Ever?
           </h2>
-          <p className="text-xl text-gray-600 mb-10">
+          <p className="text-xl text-white/70 mb-10">
             Register now to secure your free activity tickets, exclusive coupons, and priority entry. It only takes 30 seconds.
           </p>
           <button 
@@ -467,7 +481,7 @@ export default function HomePage() {
           >
             Register Free Now
           </button>
-          <p className="mt-6 text-gray-500 text-sm">
+          <p className="mt-6 text-white/50 text-sm">
             Saturday, May 9, 2026 • 10 AM – 6 PM • Eagle Mountain, Utah
           </p>
         </div>
@@ -488,19 +502,19 @@ export default function HomePage() {
         </div>
       </footer>
 
-      {/* Registration Modal */}
+      {/* Registration Modal - Luma Embed Placeholder */}
       {showModal && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white rounded-3xl shadow-2xl max-w-md w-full p-8 relative">
+          <div className="bg-white rounded-3xl shadow-2xl max-w-lg w-full p-8 relative max-h-[90vh] overflow-y-auto">
             <button 
               onClick={() => setShowModal(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 z-10"
             >
               <X className="w-6 h-6" />
             </button>
             
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              <h3 className="text-2xl font-bold text-gray-900 font-serif mb-2">
                 Register Your Family
               </h3>
               <p className="text-gray-600 text-sm">
@@ -508,39 +522,29 @@ export default function HomePage() {
               </p>
             </div>
 
-            <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                <input 
-                  type="text" 
-                  placeholder="Your name"
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-amber-400 focus:ring-2 focus:ring-amber-100 focus:outline-none transition-all"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                <input 
-                  type="email" 
-                  placeholder="you@email.com"
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-amber-400 focus:ring-2 focus:ring-amber-100 focus:outline-none transition-all"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                <input 
-                  type="tel" 
-                  placeholder="(555) 123-4567"
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-amber-400 focus:ring-2 focus:ring-amber-100 focus:outline-none transition-all"
-                />
-              </div>
+            {/* 
+              ==========================================
+              LUMA EMBED GOES HERE
+              ==========================================
+              Once Ranee creates the Luma event, replace 
+              this placeholder with the Luma embed code:
               
-              <button 
-                type="submit"
-                className="w-full py-4 bg-gradient-to-r from-amber-400 to-orange-500 text-gray-900 font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-[1.02]"
-              >
-                Complete Registration
-              </button>
-            </form>
+              <iframe 
+                src="https://lu.ma/embed/event/YOUR-EVENT-ID"
+                width="100%" 
+                height="450"
+                frameBorder="0"
+                style={{ borderRadius: '12px' }}
+                allowFullScreen
+              />
+              ==========================================
+            */}
+            
+            {/* Temporary placeholder form - remove when Luma is ready */}
+            <div className="border-2 border-dashed border-amber-300 rounded-xl p-6 bg-amber-50 text-center">
+              <p className="text-amber-700 font-medium mb-2">🎟️ Registration Coming Soon!</p>
+              <p className="text-amber-600 text-sm">Luma registration will be embedded here once the event is created.</p>
+            </div>
 
             <p className="text-xs text-gray-400 text-center mt-4">
               By registering, you agree to receive event updates via email and SMS.
