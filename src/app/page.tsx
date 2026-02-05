@@ -49,9 +49,9 @@ export default function HomePage() {
             />
           </a>
           <div className="hidden md:flex items-center gap-8">
-            <a href="#about" className={`text-sm font-medium transition-colors hover:text-amber-400 ${scrolled ? 'text-gray-600' : 'text-white/80'}`}>About</a>
-            <a href="#attractions" className={`text-sm font-medium transition-colors hover:text-amber-400 ${scrolled ? 'text-gray-600' : 'text-white/80'}`}>Attractions</a>
-            <a href="#register" className={`text-sm font-medium transition-colors hover:text-amber-400 ${scrolled ? 'text-gray-600' : 'text-white/80'}`}>Register</a>
+            <a href="#about" className={`text-sm font-medium transition-colors hover:text-cyan-400 ${scrolled ? 'text-gray-600' : 'text-white/80'}`}>About</a>
+            <a href="#attractions" className={`text-sm font-medium transition-colors hover:text-cyan-400 ${scrolled ? 'text-gray-600' : 'text-white/80'}`}>Attractions</a>
+            <a href="#register" className={`text-sm font-medium transition-colors hover:text-cyan-400 ${scrolled ? 'text-gray-600' : 'text-white/80'}`}>Register</a>
           </div>
           <button 
             onClick={() => setShowModal(true)}
@@ -98,19 +98,19 @@ export default function HomePage() {
         </div>
         
         {/* Floating orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-400/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-400/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-pink-500/20 rounded-full blur-3xl" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
           <div className="inline-block mb-6">
-            <span className="bg-white/10 backdrop-blur-sm text-amber-300 text-sm font-medium px-4 py-2 rounded-full border border-white/10">
+            <span className="bg-white/10 backdrop-blur-sm text-cyan-300 text-sm font-medium px-4 py-2 rounded-full border border-white/10">
               Grand Opening Event — May 9, 2026
             </span>
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white font-serif mb-6 leading-tight">
             Utah's Premier<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-pink-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-pink-500 to-cyan-400">
               Family Festival
             </span>
           </h1>
