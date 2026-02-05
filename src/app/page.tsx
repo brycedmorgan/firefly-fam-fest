@@ -69,7 +69,7 @@ export default function HomePage() {
           />
         </div>
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-purple-900/85 to-slate-900/90" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-blue-900/85 to-slate-900/90" />
         <div className="absolute inset-0 confetti-heavy opacity-20" />
         
         {/* Animated falling confetti */}
@@ -93,7 +93,7 @@ export default function HomePage() {
         
         {/* Floating orbs */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-400/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
           <div className="inline-block mb-6">
@@ -454,7 +454,7 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900">
+      <section className="py-20 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
@@ -473,7 +473,7 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <section id="register" className="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      <section id="register" className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
         {/* Animated confetti */}
         <div className="confetti-animated">
           <div className="confetti-piece" />
