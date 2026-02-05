@@ -53,7 +53,7 @@ export default function HomePage() {
             </span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white font-serif mb-6 leading-tight">
             Utah's Premier<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-pink-400">
               Family Festival
@@ -109,7 +109,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="text-amber-500 font-semibold text-sm tracking-wide uppercase">Free Registration</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 font-serif mt-3 mb-6">
                 Skip the Lines.<br />Get the Perks.
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -163,7 +163,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <span className="text-amber-500 font-semibold text-sm tracking-wide uppercase">All-Day Entertainment</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 font-serif mt-3 mb-4">
               Something for Everyone
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -180,7 +180,7 @@ export default function HomePage() {
                 <div className="inline-block px-3 py-1 bg-orange-100 text-orange-600 text-sm font-medium rounded-full mb-4">
                   Requires Activity Ticket
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                <h3 className="text-3xl font-bold text-gray-900 font-serif mb-4">
                   Utah's Largest Bounce Village
                 </h3>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -220,7 +220,7 @@ export default function HomePage() {
                 <div className="inline-block px-3 py-1 bg-purple-100 text-purple-600 text-sm font-medium rounded-full mb-4">
                   Requires Activity Ticket
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                <h3 className="text-3xl font-bold text-gray-900 font-serif mb-4">
                   Tiny Town — Ages 2-4
                 </h3>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -240,7 +240,7 @@ export default function HomePage() {
                 <div className="inline-block px-3 py-1 bg-green-100 text-green-600 text-sm font-medium rounded-full mb-4">
                   Open to All
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                <h3 className="text-3xl font-bold text-gray-900 font-serif mb-4">
                   The Munchyard Food Village
                 </h3>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -280,7 +280,7 @@ export default function HomePage() {
                 <div className="inline-block px-3 py-1 bg-violet-100 text-violet-600 text-sm font-medium rounded-full mb-4">
                   Free — Open to All
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                <h3 className="text-3xl font-bold text-gray-900 font-serif mb-4">
                   Main Stage Entertainment
                 </h3>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
@@ -302,7 +302,7 @@ export default function HomePage() {
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-serif mb-4">
               Plus So Much More
             </h2>
           </div>
@@ -353,7 +353,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <span className="text-amber-500 font-semibold text-sm tracking-wide uppercase">Plan Your Day</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-serif mt-3 mb-4">
               Festival Map
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -422,7 +422,7 @@ export default function HomePage() {
       {/* Final CTA */}
       <section id="register" className="py-24 bg-white">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 font-serif mb-6">
             Ready for the Best Day Ever?
           </h2>
           <p className="text-xl text-gray-600 mb-10">
