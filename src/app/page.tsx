@@ -49,9 +49,9 @@ export default function HomePage() {
             />
           </a>
           <div className="hidden md:flex items-center gap-8">
-            <a href="#about" className={`text-sm font-medium transition-colors hover:text-cyan-400 ${scrolled ? 'text-gray-600' : 'text-white/80'}`}>About</a>
-            <a href="#attractions" className={`text-sm font-medium transition-colors hover:text-cyan-400 ${scrolled ? 'text-gray-600' : 'text-white/80'}`}>Attractions</a>
-            <a href="#register" className={`text-sm font-medium transition-colors hover:text-cyan-400 ${scrolled ? 'text-gray-600' : 'text-white/80'}`}>Register</a>
+            <a href="#about" className={`text-base font-semibold transition-colors hover:text-cyan-400 ${scrolled ? 'text-gray-600' : 'text-white/90'}`}>About</a>
+            <a href="#attractions" className={`text-base font-semibold transition-colors hover:text-cyan-400 ${scrolled ? 'text-gray-600' : 'text-white/90'}`}>Attractions</a>
+            <a href="#register" className={`text-base font-semibold transition-colors hover:text-cyan-400 ${scrolled ? 'text-gray-600' : 'text-white/90'}`}>Register</a>
           </div>
           <button 
             onClick={() => setShowModal(true)}
