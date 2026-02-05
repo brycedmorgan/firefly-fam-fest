@@ -89,37 +89,29 @@ export default function HomePage() {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-400/20 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-pink-500/20 rounded-full blur-3xl" />
 
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-          {/* BIG Logo */}
-          <div className="mb-8">
-            <Image
-              src="/images/logo.png"
-              alt="Firefly Fam Fest"
-              width={300}
-              height={330}
-              className="mx-auto w-48 md:w-64 lg:w-72 h-auto drop-shadow-2xl"
-            />
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white font-serif mb-6 leading-tight">
-            Utah's Premier<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-pink-500 to-cyan-400">
-              Festival for Families
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed">
-            An unforgettable day of wonder, play, and togetherness at Eagle Mountain's newest community.
-          </p>
-          
-          {/* BIG Date & Time */}
-          <div className="mb-10 bg-white/10 backdrop-blur-sm rounded-2xl p-6 inline-block border border-white/20">
-            <p className="text-3xl md:text-5xl font-bold text-white mb-2">Saturday, May 9, 2026</p>
-            <p className="text-2xl md:text-4xl font-semibold text-amber-400">10 AM – 6 PM</p>
-            <p className="text-lg md:text-xl text-white/80 mt-2">📍 Eagle Mountain, Utah</p>
-          </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            {/* Left side - Text content */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-serif mb-6 leading-tight">
+                Utah's Premier<br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-pink-500 to-cyan-400">
+                  Festival for Families
+                </span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-white/70 mb-8 max-w-xl leading-relaxed">
+                An unforgettable day of wonder, play, and togetherness at Eagle Mountain's newest community.
+              </p>
+              
+              {/* BIG Date & Time */}
+              <div className="mb-10 bg-white/10 backdrop-blur-sm rounded-2xl p-6 inline-block border border-white/20">
+                <p className="text-2xl md:text-4xl font-bold text-white mb-2">Saturday, May 9, 2026</p>
+                <p className="text-xl md:text-3xl font-semibold text-amber-400">10 AM – 6 PM</p>
+                <p className="text-lg md:text-xl text-white/80 mt-2">📍 Eagle Mountain, Utah</p>
+              </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
             <button 
               onClick={() => setShowModal(true)}
               className="group bg-gradient-to-r from-amber-400 to-orange-500 text-gray-900 px-8 py-4 rounded-full text-lg font-semibold transition-all hover:scale-105 hover:shadow-xl hover:shadow-amber-500/25 flex items-center justify-center gap-2"
@@ -133,8 +125,20 @@ export default function HomePage() {
             >
               Explore Activities
             </a>
+              </div>
+            </div>
+            
+            {/* Right side - BIG Logo */}
+            <div className="hidden lg:flex justify-center items-center">
+              <Image
+                src="/images/logo.png"
+                alt="Firefly Fam Fest"
+                width={600}
+                height={660}
+                className="w-full max-w-lg h-auto drop-shadow-2xl"
+              />
+            </div>
           </div>
-
         </div>
 
         {/* Scroll indicator */}
