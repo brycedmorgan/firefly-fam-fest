@@ -371,20 +371,14 @@ export default function HomePage() {
               { image: '/images/touch-a-truck.jpg', title: 'Touch-a-Truck', desc: 'Climb real fire trucks & more', tag: 'Free' },
             ].map((item, i) => (
               <div key={i} className={`scroll-reveal stagger-${i + 1} bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group`}>
-                {item.image ? (
-                  <div className="aspect-[4/3] relative overflow-hidden">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
-                ) : (
-                  <div className="aspect-[4/3] bg-gradient-to-br from-amber-100 to-orange-100 flex items-center justify-center text-6xl">
-                    {item.icon}
-                  </div>
-                )}
+                <div className="aspect-[4/3] relative overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
                 <div className="p-5">
                   <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-sm text-gray-600 mb-3">{item.desc}</p>
