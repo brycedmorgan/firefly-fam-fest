@@ -347,8 +347,8 @@ export default function HomePage() {
               { image: '/images/performers.png', title: 'Character Meet & Greet', desc: 'Princesses, superheroes & more', tag: 'Free' },
               { image: '/images/music-singalongs.png', title: 'Music & Singalongs', desc: 'Family-friendly tunes all day', tag: 'Free' },
               { image: '/images/prizes-raffles.png', title: 'Prizes & Raffles', desc: 'Win big throughout the day', tag: 'Free' },
-              { image: '', icon: '🚂', title: 'Firefly Express', desc: 'Trackless train ride through the festival', tag: 'Ticket' },
-              { image: '', icon: '🚒', title: 'Touch-a-Truck', desc: 'Climb real fire trucks & more', tag: 'Free' },
+              { image: '/images/train-rides.jpg', title: 'Firefly Express', desc: 'Trackless train ride through the festival', tag: 'Ticket' },
+              { image: '/images/touch-a-truck.jpg', title: 'Touch-a-Truck', desc: 'Climb real fire trucks & more', tag: 'Free' },
             ].map((item, i) => (
               <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
                 {item.image ? (
