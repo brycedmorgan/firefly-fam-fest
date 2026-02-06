@@ -601,32 +601,48 @@ export default function HomePage() {
           <div className="space-y-4">
             {[
               {
-                q: 'Is the event free?',
-                a: 'Yes! Registration is completely free. When you register, you\'ll receive 5 free activity tickets for bounce houses, train rides, and craft stations, plus exclusive punch cards for prize entries.'
+                q: 'Is the event free to attend?',
+                a: 'Yes! General admission is free — anyone can walk through the gates, tour model homes, visit vendor areas, watch main stage entertainment, buy from food trucks, and take photos with roaming characters.'
+              },
+              {
+                q: 'What do I get if I register?',
+                a: 'Registered guests receive: 5 FREE activity tickets (for bounce houses, train rides, face painting, crafts), a craft station punch card (complete all stations to enter the Family Getaway raffle!), a Touch-a-Truck punch card (visit all vehicles to win Giant Tonka Trucks!), free treat coupons, and priority entry.'
+              },
+              {
+                q: 'Can I buy more activity tickets?',
+                a: 'Yes! Additional activity tickets are available for just $1 each at the event. This helps with line control at our most popular attractions.'
+              },
+              {
+                q: 'What activities require tickets?',
+                a: 'Bounce houses, Tiny Town toddler zone, face painting, balloon artists, the Firefly Express trackless train, and craft stations all require activity tickets. The main stage entertainment, Touch-a-Truck zone, food trucks, and vendor areas are free for everyone!'
               },
               {
                 q: 'Where is the event located?',
-                a: 'Firefly Fam Fest is held at the Firefly Community in Eagle Mountain, Utah. Full address and directions will be sent to registered attendees.'
+                a: 'Firefly Fam Fest is held at the Firefly Community in Eagle Mountain, Utah. Full address and parking directions will be sent to registered attendees.'
               },
               {
                 q: 'What time does it start and end?',
                 a: 'The festival runs from 11 AM to 8 PM on Saturday, May 9, 2026. Come for an hour or stay all day — there\'s always something happening!'
               },
               {
-                q: 'Is parking free?',
-                a: 'Yes, parking is free! We have dedicated parking areas with easy access to the festival grounds.'
+                q: 'Will there be a ribbon-cutting ceremony?',
+                a: 'Yes! The Mayor will be present for a special ribbon-cutting ceremony as we officially open the Firefly community. It\'s a historic moment you won\'t want to miss!'
               },
               {
                 q: 'Are there activities for toddlers?',
-                a: 'Absolutely! Tiny Town is a dedicated soft-play zone designed specifically for ages 2-4, featuring mini bounce houses, a giant corn box, and a Tonka truck sandbox — all shaded and safe.'
+                a: 'Absolutely! Tiny Town is a dedicated soft-play zone designed specifically for ages 2-4, featuring mini bounce houses, a giant corn box with Tonka trucks and buckets, and a sandbox — all shaded, enclosed, and safe.'
+              },
+              {
+                q: 'Will there be vendors?',
+                a: 'Yes! We\'ll have 25-35 vendor booths featuring a mix of kid-focused vendors and local businesses/artisans. Browse unique finds while enjoying the festival!'
               },
               {
                 q: 'Can I bring outside food and drinks?',
-                a: 'Small snacks and water bottles are welcome, but we encourage you to explore The Munchyard with 10+ amazing food trucks offering everything from BBQ to gourmet treats!'
+                a: 'Small snacks and water bottles are welcome, but we encourage you to explore The Munchyard with 10+ amazing food trucks offering everything from BBQ and tacos to gourmet treats and desserts!'
               },
               {
-                q: 'Do I need to register in advance?',
-                a: 'Walk-ins are welcome, but registered families get free activity tickets, craft punch passes, and priority entry — so we highly recommend registering ahead of time!'
+                q: 'What prizes can I win?',
+                a: 'Complete your Craft Punch Card at all creation stations to enter the FAMILY GETAWAY raffle! Complete your Touch-a-Truck Punch Card to win a GIANT TONKA TRUCK bundle! Plus, tour model homes for separate prize drawings.'
               },
               {
                 q: 'What should I bring?',
