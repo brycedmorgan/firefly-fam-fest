@@ -241,7 +241,7 @@ export default function HomePage() {
               <div className="order-1 lg:order-2 scroll-reveal-right">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative group">
                   <video
-                    src="/images/bounce-village.mp4"
+                    src="/images/bg-bounce-house.mp4"
                     autoPlay
                     loop
                     muted
@@ -256,11 +256,13 @@ export default function HomePage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="scroll-reveal-left">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative group">
-                  <Image
-                    src="/images/tiny-town.png"
-                    alt="Tiny Town toddler zone"
-                    fill
-                    className="object-cover ken-burns group-hover:scale-110 transition-transform duration-700"
+                  <video
+                    src="/images/bg-tiny-town.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
               </div>
@@ -303,7 +305,7 @@ export default function HomePage() {
               <div className="order-1 lg:order-2 scroll-reveal-right">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative group">
                   <video
-                    src="/images/food-trucks.mp4"
+                    src="/images/bg-food-trucks.mp4"
                     autoPlay
                     loop
                     muted
@@ -318,11 +320,13 @@ export default function HomePage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="scroll-reveal-left">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative group">
-                  <Image
-                    src="/images/entertainment.png"
-                    alt="Live entertainment and performers"
-                    fill
-                    className="object-cover ken-burns group-hover:scale-110 transition-transform duration-700"
+                  <video
+                    src="/images/bg-entertainment.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
               </div>
@@ -366,11 +370,13 @@ export default function HomePage() {
               </div>
               <div className="order-1 lg:order-2 scroll-reveal-right">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative group">
-                  <Image
-                    src="/images/crafts-for-kids.png"
-                    alt="Kids creation stations and crafts"
-                    fill
-                    className="object-cover ken-burns group-hover:scale-110 transition-transform duration-700"
+                  <video
+                    src="/images/bg-crafts-for-kids.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
               </div>
