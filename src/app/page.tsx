@@ -433,11 +433,11 @@ export default function HomePage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { image: '/images/face-painting.mp4', title: 'Face Painting', desc: 'Professional artists, endless designs', tag: 'Ticket', isVideo: true },
+              { image: '/images/face-painting.mp4', title: 'Face Painting', desc: 'Professional artists, endless designs', tag: 'Ticket', isVideo: true, wordOverlay: '/images/word-face-painting.png' },
               { image: '/images/balloon-art.png', title: 'Balloon Artists', desc: 'Custom creations for every kid', tag: 'Ticket' },
               { image: '/images/performers.png', title: 'Character Meet & Greet', desc: 'Elsa, Anna, Belle, Spiderman, Mario, Bluey & more!', tag: 'Free' },
               { image: '/images/train-rides.jpg', title: '🚂 Firefly Express', desc: 'Trackless train ride through the festival grounds', tag: 'Ticket' },
-              { image: '/images/fire-truck.mp4', title: '🚒 Big Truck Corral', desc: 'Touch-a-Truck zone + punch card for Giant Tonka raffle!', tag: 'Free', isVideo: true },
+              { image: '/images/fire-truck.mp4', title: '🚒 Big Truck Corral', desc: 'Touch-a-Truck zone + punch card for Giant Tonka raffle!', tag: 'Free', isVideo: true, wordOverlay: '/images/word-touch-a-truck.png' },
               { image: '/images/music-singalongs.png', title: 'Music & Singalongs', desc: 'Family-friendly tunes all day', tag: 'Free' },
               { image: '/images/prizes-raffles.png', title: '🏆 Grand Prizes', desc: 'Craft pass → Family Getaway! Truck pass → Giant Tonka Set!', tag: 'Free' },
               { image: '/images/crafts-for-kids.png', title: 'Punch Card Fun', desc: 'Complete activities to enter prize drawings!', tag: 'Free' },
@@ -460,6 +460,17 @@ export default function HomePage() {
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
+                  )}
+                  {item.wordOverlay && (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Image
+                        src={item.wordOverlay}
+                        alt=""
+                        width={200}
+                        height={100}
+                        className="w-3/4 h-auto drop-shadow-lg"
+                      />
+                    </div>
                   )}
                 </div>
                 <div className="p-5">
