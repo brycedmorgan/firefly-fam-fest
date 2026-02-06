@@ -5,10 +5,15 @@ export const metadata: Metadata = {
   title: 'Firefly Fam Fest 2026 | Eagle Mountain Family Festival',
   description: 'Join us Saturday, May 9, 2026 in Eagle Mountain, Utah for an unforgettable day of family fun. Bounce houses, food trucks, live entertainment, and more.',
   keywords: ['Firefly Fam Fest', 'Utah family festival', 'Eagle Mountain events', 'family activities Utah', 'Candlelight Homes'],
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: 'Firefly Fam Fest 2026 | Eagle Mountain Family Festival',
     description: 'An unforgettable day of wonder, play, and togetherness at Eagle Mountain\'s newest community.',
     type: 'website',
+    images: ['/images/logo.png'],
   },
 };
 
