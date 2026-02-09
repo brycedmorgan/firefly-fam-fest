@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { Calendar, MapPin, Clock, Ticket, X, ChevronDown, Check } from 'lucide-react';
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default function HomePage() {
   const [showModal, setShowModal] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -240,8 +242,7 @@ export default function HomePage() {
               </div>
               <div className="order-1 lg:order-2 scroll-reveal-right">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative group">
-                  <video
-                    src="/images/bg-bounce-house.mp4"
+                  <video src={`${BASE}/images/bg-bounce-house.mp4`}
                     autoPlay
                     loop
                     muted
@@ -249,8 +250,7 @@ export default function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/images/word-bounce-house.png" alt="" className="w-2/3 h-auto drop-shadow-lg" />
+                    <Image src="/images/word-bounce-house.png" alt="" width={300} height={150} unoptimized className="w-2/3 h-auto drop-shadow-lg" />
                   </div>
                 </div>
               </div>
@@ -260,8 +260,7 @@ export default function HomePage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="scroll-reveal-left">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative group">
-                  <video
-                    src="/images/bg-tiny-town.mp4"
+                  <video src={`${BASE}/images/bg-tiny-town.mp4`}
                     autoPlay
                     loop
                     muted
@@ -269,8 +268,7 @@ export default function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/images/word-tiny-town.png" alt="" className="w-2/3 h-auto drop-shadow-lg" />
+                    <Image src="/images/word-tiny-town.png" alt="" width={300} height={150} unoptimized className="w-2/3 h-auto drop-shadow-lg" />
                   </div>
                 </div>
               </div>
@@ -312,8 +310,7 @@ export default function HomePage() {
               </div>
               <div className="order-1 lg:order-2 scroll-reveal-right">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative group">
-                  <video
-                    src="/images/bg-food-trucks.mp4"
+                  <video src={`${BASE}/images/bg-food-trucks.mp4`}
                     autoPlay
                     loop
                     muted
@@ -321,8 +318,7 @@ export default function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/images/word-food-trucks.png" alt="" className="w-2/3 h-auto drop-shadow-lg" />
+                    <Image src="/images/word-food-trucks.png" alt="" width={300} height={150} unoptimized className="w-2/3 h-auto drop-shadow-lg" />
                   </div>
                 </div>
               </div>
@@ -332,8 +328,7 @@ export default function HomePage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="scroll-reveal-left">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative group">
-                  <video
-                    src="/images/bg-entertainment.mp4"
+                  <video src={`${BASE}/images/bg-entertainment.mp4`}
                     autoPlay
                     loop
                     muted
@@ -341,8 +336,7 @@ export default function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/images/word-entertainment.png" alt="" className="w-2/3 h-auto drop-shadow-lg" />
+                    <Image src="/images/word-entertainment.png" alt="" width={300} height={150} unoptimized className="w-2/3 h-auto drop-shadow-lg" />
                   </div>
                 </div>
               </div>
@@ -386,8 +380,7 @@ export default function HomePage() {
               </div>
               <div className="order-1 lg:order-2 scroll-reveal-right">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative group">
-                  <video
-                    src="/images/bg-crafts-for-kids.mp4"
+                  <video src={`${BASE}/images/bg-crafts-for-kids.mp4`}
                     autoPlay
                     loop
                     muted
@@ -395,8 +388,7 @@ export default function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/images/word-crafts-for-kids.png" alt="" className="w-2/3 h-auto drop-shadow-lg" />
+                    <Image src="/images/word-crafts-for-kids.png" alt="" width={300} height={150} unoptimized className="w-2/3 h-auto drop-shadow-lg" />
                   </div>
                 </div>
               </div>
@@ -458,14 +450,14 @@ export default function HomePage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { image: '/images/face-painting.mp4', title: 'Face Painting', desc: 'Professional artists, endless designs', tag: 'Ticket', isVideo: true, wordOverlay: '/images/word-face-painting.png' },
-              { image: '/images/bg-balloon-art.mp4', title: 'Balloon Artists', desc: 'Custom creations for every kid', tag: 'Ticket', isVideo: true, wordOverlay: '/images/word-balloon-art.png' },
-              { image: '/images/bg-performers.mp4', title: 'Character Meet & Greet', desc: 'Elsa, Anna, Belle, Spiderman, Mario, Bluey & more!', tag: 'Free', isVideo: true, wordOverlay: '/images/word-performers.png' },
-              { image: '/images/bg-train-rides.mp4', title: '🚂 Firefly Express', desc: 'Trackless train ride through the festival grounds', tag: 'Ticket', isVideo: true },
-              { image: '/images/fire-truck.mp4', title: '🚒 Big Truck Corral', desc: 'Touch-a-Truck zone + punch card for Giant Tonka raffle!', tag: 'Free', isVideo: true, wordOverlay: '/images/word-touch-a-truck.png' },
-              { image: '/images/bg-music-singalongs.mp4', title: 'Music & Singalongs', desc: 'Family-friendly tunes all day', tag: 'Free', isVideo: true, wordOverlay: '/images/word-music-singalongs.png' },
-              { image: '/images/bg-prizes-and-raffles.mp4', title: '🏆 Grand Prizes', desc: 'Craft pass → Family Getaway! Truck pass → Giant Tonka Set!', tag: 'Free', isVideo: true, wordOverlay: '/images/word-prizes-raffles.png' },
-              { image: '/images/bg-crafts-for-kids.mp4', title: 'Punch Card Fun', desc: 'Complete activities to enter prize drawings!', tag: 'Free', isVideo: true, wordOverlay: '/images/word-crafts-for-kids.png' },
+              { image: `${BASE}/images/face-painting.mp4`, title: 'Face Painting', desc: 'Professional artists, endless designs', tag: 'Ticket', isVideo: true, wordOverlay: `${BASE}/images/word-face-painting.png` },
+              { image: `${BASE}/images/bg-balloon-art.mp4`, title: 'Balloon Artists', desc: 'Custom creations for every kid', tag: 'Ticket', isVideo: true, wordOverlay: `${BASE}/images/word-balloon-art.png` },
+              { image: `${BASE}/images/bg-performers.mp4`, title: 'Character Meet & Greet', desc: 'Elsa, Anna, Belle, Spiderman, Mario, Bluey & more!', tag: 'Free', isVideo: true, wordOverlay: `${BASE}/images/word-performers.png` },
+              { image: `${BASE}/images/bg-train-rides.mp4`, title: '🚂 Firefly Express', desc: 'Trackless train ride through the festival grounds', tag: 'Ticket', isVideo: true },
+              { image: `${BASE}/images/fire-truck.mp4`, title: '🚒 Big Truck Corral', desc: 'Touch-a-Truck zone + punch card for Giant Tonka raffle!', tag: 'Free', isVideo: true, wordOverlay: `${BASE}/images/word-touch-a-truck.png` },
+              { image: `${BASE}/images/bg-music-singalongs.mp4`, title: 'Music & Singalongs', desc: 'Family-friendly tunes all day', tag: 'Free', isVideo: true, wordOverlay: `${BASE}/images/word-music-singalongs.png` },
+              { image: `${BASE}/images/bg-prizes-and-raffles.mp4`, title: '🏆 Grand Prizes', desc: 'Craft pass → Family Getaway! Truck pass → Giant Tonka Set!', tag: 'Free', isVideo: true, wordOverlay: `${BASE}/images/word-prizes-raffles.png` },
+              { image: `${BASE}/images/bg-crafts-for-kids.mp4`, title: 'Punch Card Fun', desc: 'Complete activities to enter prize drawings!', tag: 'Free', isVideo: true, wordOverlay: `${BASE}/images/word-crafts-for-kids.png` },
             ].map((item, i) => (
               <div key={i} className={`scroll-reveal stagger-${i + 1} bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group`}>
                 <div className="aspect-[4/3] relative overflow-hidden">
@@ -488,10 +480,12 @@ export default function HomePage() {
                   )}
                   {item.wordOverlay && (
                     <div className="absolute inset-0 flex items-center justify-center">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      <Image
                         src={item.wordOverlay}
                         alt=""
+                        width={200}
+                        height={100}
+                        unoptimized
                         className="w-3/4 h-auto drop-shadow-lg"
                       />
                     </div>
