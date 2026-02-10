@@ -744,7 +744,7 @@ export default function HomePage() {
             {/* Luma Registration Embed - full display */}
             <div className="relative overflow-hidden rounded-xl" style={{ height: '600px' }}>
               <iframe
-                src="https://lu.ma/embed/checkout/evt-wSH7R185vaXhneD"
+                src="https://luma.com/embed/event/evt-wSH7R185vaXhneD/simple"
                 width="100%"
                 height="600"
                 frameBorder="0"
