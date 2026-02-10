@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
 import { Calendar, MapPin, Clock, Ticket, X, ChevronDown, Check } from 'lucide-react';
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -42,8 +41,7 @@ export default function HomePage() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <a href="#" className="flex-shrink-0">
-            <Image
-              src={`${BASE}/images/logo.png`}
+            <img src={`${BASE}/images/logo.png`}
               alt="Firefly Fam Fest"
               width={60}
               height={60}
@@ -69,12 +67,9 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <Image
-            src={`${BASE}/images/hero-aerial.jpg`}
+          <img src={`${BASE}/images/hero-aerial.jpg`}
             alt="Firefly Community Aerial View"
-            fill
             className="object-cover"
-            priority
           />
         </div>
         {/* Gradient Overlay */}
@@ -133,8 +128,7 @@ export default function HomePage() {
             
             {/* Right side - BIG Logo */}
             <div className="hidden lg:flex justify-center items-center">
-              <Image
-                src={`${BASE}/images/logo.png`}
+              <img src={`${BASE}/images/logo.png`}
                 alt="Firefly Fam Fest"
                 width={600}
                 height={660}
@@ -190,10 +184,8 @@ export default function HomePage() {
 
             <div className="relative">
               <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
-                <Image
-                  src={`${BASE}/images/family-pass.jpg`}
+                <img src={`${BASE}/images/family-pass.jpg`}
                   alt="Family Registration Pass"
-                  fill
                   className="object-cover"
                 />
               </div>
@@ -250,7 +242,7 @@ export default function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Image src={`${BASE}/images/word-bounce-house.png`} alt="" width={300} height={150} unoptimized className="w-2/3 h-auto drop-shadow-lg" />
+                    <img src={`${BASE}/images/word-bounce-house.png`} alt="" width={300} height={150} className="w-2/3 h-auto drop-shadow-lg" />
                   </div>
                 </div>
               </div>
@@ -268,7 +260,7 @@ export default function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Image src={`${BASE}/images/word-tiny-town.png`} alt="" width={300} height={150} unoptimized className="w-2/3 h-auto drop-shadow-lg" />
+                    <img src={`${BASE}/images/word-tiny-town.png`} alt="" width={300} height={150} className="w-2/3 h-auto drop-shadow-lg" />
                   </div>
                 </div>
               </div>
@@ -318,7 +310,7 @@ export default function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Image src={`${BASE}/images/word-food-trucks.png`} alt="" width={300} height={150} unoptimized className="w-2/3 h-auto drop-shadow-lg" />
+                    <img src={`${BASE}/images/word-food-trucks.png`} alt="" width={300} height={150} className="w-2/3 h-auto drop-shadow-lg" />
                   </div>
                 </div>
               </div>
@@ -336,7 +328,7 @@ export default function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Image src={`${BASE}/images/word-entertainment.png`} alt="" width={300} height={150} unoptimized className="w-2/3 h-auto drop-shadow-lg" />
+                    <img src={`${BASE}/images/word-entertainment.png`} alt="" width={300} height={150} className="w-2/3 h-auto drop-shadow-lg" />
                   </div>
                 </div>
               </div>
@@ -388,7 +380,7 @@ export default function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Image src={`${BASE}/images/word-crafts-for-kids.png`} alt="" width={300} height={150} unoptimized className="w-2/3 h-auto drop-shadow-lg" />
+                    <img src={`${BASE}/images/word-crafts-for-kids.png`} alt="" width={300} height={150} className="w-2/3 h-auto drop-shadow-lg" />
                   </div>
                 </div>
               </div>
@@ -471,21 +463,19 @@ export default function HomePage() {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   ) : (
-                    <Image
+                    <img
                       src={item.image}
                       alt={item.title}
-                      fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   )}
                   {item.wordOverlay && (
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <Image
+                      <img
                         src={item.wordOverlay}
                         alt=""
                         width={200}
                         height={100}
-                        unoptimized
                         className="w-3/4 h-auto drop-shadow-lg"
                       />
                     </div>
@@ -521,8 +511,7 @@ export default function HomePage() {
           </div>
           
           <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
-            <Image
-              src={`${BASE}/images/event-map.jpg`}
+            <img src={`${BASE}/images/event-map.jpg`}
               alt="Firefly Fam Fest Event Map"
               width={1400}
               height={1000}
@@ -599,7 +588,7 @@ export default function HomePage() {
             Ready for the Best Day Ever?
           </h2>
           <p className="text-xl text-white/70 mb-10">
-            Register now to secure your free activity tickets, exclusive coupons, and priority entry. It only takes 30 seconds.
+            Register now to secure your free activity tickets, exclusive coupons, and entry. It only takes 30 seconds.
           </p>
           <button 
             onClick={() => setShowModal(true)}
@@ -635,7 +624,7 @@ export default function HomePage() {
               },
               {
                 q: 'What do I get if I register?',
-                a: 'Registered guests receive: 5 FREE activity tickets (for bounce houses, train rides, face painting, crafts), a craft station punch card (complete all stations to enter the Family Getaway raffle!), a Touch-a-Truck punch card (visit all vehicles to win Giant Tonka Trucks!), free treat coupons, and priority entry.'
+                a: 'Registered guests receive: 5 FREE activity tickets (for bounce houses, train rides, face painting, crafts), a craft station punch card (complete all stations to enter the Family Getaway raffle!), a Touch-a-Truck punch card (visit all vehicles to win Giant Tonka Trucks!), free treat coupons, and entry.'
               },
               {
                 q: 'Can I buy more activity tickets?',
@@ -704,8 +693,7 @@ export default function HomePage() {
       <footer className="py-12 bg-slate-900 text-white/60">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col items-center gap-6">
-            <Image
-              src={`${BASE}/images/logo.png`}
+            <img src={`${BASE}/images/logo.png`}
               alt="Firefly Fam Fest"
               width={100}
               height={110}
@@ -731,8 +719,7 @@ export default function HomePage() {
             </button>
             
             <div className="text-center mb-6">
-              <Image
-                src={`${BASE}/images/logo.png`}
+              <img src={`${BASE}/images/logo.png`}
                 alt="Firefly Fam Fest"
                 width={120}
                 height={130}
