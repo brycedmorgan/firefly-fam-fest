@@ -381,6 +381,75 @@ export default function HomePage() {
               </div>
             </div>
 
+            {/* 5. Tiny Town */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="scroll-reveal-left">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative group">
+                  <video src={`${BASE}/images/bg-tiny-town.mp4`}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <img src={`${BASE}/images/word-tiny-town.png`} alt="" width={300} height={150} className="w-2/3 h-auto drop-shadow-lg" />
+                  </div>
+                </div>
+              </div>
+              <div className="scroll-reveal-right">
+                <div className="inline-block px-3 py-1 bg-purple-100 text-purple-600 text-sm font-medium rounded-full mb-4">
+                  Requires Activity Ticket
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900 font-serif mb-4">
+                  Tiny Town - Ages 2-4
+                </h3>
+                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                  A dedicated soft-play zone designed just for your littlest ones. Featuring mini bounce houses, a giant corn box, and a Tonka truck sandbox - safe, shaded, and perfectly sized.
+                </p>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-center gap-2"><span className="text-purple-500">•</span> Soft, safe play structures</li>
+                  <li className="flex items-center gap-2"><span className="text-purple-500">•</span> Sensory sandbox play</li>
+                  <li className="flex items-center gap-2"><span className="text-purple-500">•</span> Fully shaded & enclosed</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* 6. Live Entertainment */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1 scroll-reveal-left">
+                <div className="inline-block px-3 py-1 bg-violet-100 text-violet-600 text-sm font-medium rounded-full mb-4">
+                  Free - Open to All
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900 font-serif mb-4">
+                  Live Shows All Day
+                </h3>
+                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                  Non-stop family entertainment all day on our main stage. From dazzling magic shows to incredible acrobats and jugglers, there's always something amazing happening.
+                </p>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-center gap-2"><span className="text-violet-500">•</span> Magic shows & acrobatic performers</li>
+                  <li className="flex items-center gap-2"><span className="text-violet-500">•</span> Professional jugglers & stilt walkers</li>
+                  <li className="flex items-center gap-2"><span className="text-violet-500">•</span> Reptile & exotic animal encounters</li>
+                  <li className="flex items-center gap-2"><span className="text-violet-500">•</span> Live music & family singalongs</li>
+                </ul>
+              </div>
+              <div className="order-1 lg:order-2 scroll-reveal-right">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative group">
+                  <video src={`${BASE}/images/bg-entertainment.mp4`}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <img src={`${BASE}/images/word-entertainment.png`} alt="" width={300} height={150} className="w-2/3 h-auto drop-shadow-lg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -437,10 +506,8 @@ export default function HomePage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { image: `${BASE}/images/bg-tiny-town.mp4`, title: 'Tiny Town (Ages 2-4)', desc: 'Mini bounce houses, corn box & Tonka sandbox', tag: 'Ticket', isVideo: true, wordOverlay: `${BASE}/images/word-tiny-town.png` },
               { image: `${BASE}/images/bg-crafts-for-kids.mp4`, title: 'Creation Stations', desc: 'Kites, ribbon wands, windsocks & hat decorating', tag: 'Ticket', isVideo: true, wordOverlay: `${BASE}/images/word-crafts-for-kids.png` },
               { image: `${BASE}/images/bg-food-trucks.mp4`, title: 'Food Truck Village', desc: '10+ local food trucks, shaded seating', tag: 'Free', isVideo: true, wordOverlay: `${BASE}/images/word-food-trucks.png` },
-              { image: `${BASE}/images/bg-entertainment.mp4`, title: 'Live Entertainment', desc: 'Magic shows, acrobats, jugglers & animal encounters', tag: 'Free', isVideo: true, wordOverlay: `${BASE}/images/word-entertainment.png` },
               { image: `${BASE}/images/bg-balloon-art.mp4`, title: 'Balloon Artists', desc: 'Custom creations for every kid', tag: 'Ticket', isVideo: true, wordOverlay: `${BASE}/images/word-balloon-art.png` },
               { image: `${BASE}/images/bg-performers.mp4`, title: 'Character Meet & Greet', desc: 'Elsa, Anna, Belle, Spiderman, Mario, Bluey & more!', tag: 'Free', isVideo: true, wordOverlay: `${BASE}/images/word-performers.png` },
               { image: `${BASE}/images/bg-train-rides.mp4`, title: '🚂 Firefly Express', desc: 'Trackless train ride through the festival grounds', tag: 'Ticket', isVideo: true, wordOverlay: `${BASE}/images/word-train-rides.png` },
