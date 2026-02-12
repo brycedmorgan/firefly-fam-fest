@@ -101,11 +101,31 @@ export default function HomePage() {
 
             {/* Right side - Text content */}
             <div className="text-center lg:text-left">
-              <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold text-white font-serif mb-4 leading-[1.05]">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFC72C] via-[#00BFFF] to-[#FFC72C]">
-                  FREE PASS
-                </span>
-              </h1>
+              <div className="relative inline-block">
+                <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold text-white font-serif mb-4 leading-[1.05]">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFC72C] via-[#00BFFF] to-[#FFC72C]">
+                    FREE PASS
+                  </span>
+                </h1>
+                {/* $35 Value Sticker - Firefly logo style */}
+                <div className="absolute -top-2 -right-4 md:-top-4 md:-right-8 lg:-top-6 lg:-right-12 z-20 rotate-12">
+                  <div 
+                    className="relative w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 flex flex-col items-center justify-center"
+                    style={{ fontFamily: "'Fredoka', sans-serif" }}
+                  >
+                    {/* Outer glow/shadow */}
+                    <div className="absolute inset-0 bg-[#1a1a2e] rounded-full scale-110 blur-sm opacity-60" />
+                    {/* Main badge */}
+                    <div className="relative bg-gradient-to-br from-[#FFD200] via-[#FFC72C] to-[#FF8C42] rounded-full w-full h-full flex flex-col items-center justify-center shadow-2xl border-4 border-white">
+                      {/* Inner highlight */}
+                      <div className="absolute top-2 left-3 w-4 h-4 bg-white/40 rounded-full blur-sm" />
+                      <span className="font-bold text-xl md:text-2xl lg:text-3xl text-[#1a1a2e] leading-none drop-shadow-sm">$35</span>
+                      <span className="text-[9px] md:text-[10px] lg:text-xs font-bold text-[#1a1a2e] uppercase tracking-wide">Value</span>
+                      <span className="text-[8px] md:text-[9px] lg:text-[10px] font-bold text-[#00BBF9] uppercase">Yours FREE</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-serif mb-3">
                 Utah{'\u2019'}s Largest Family Festival
@@ -200,14 +220,9 @@ export default function HomePage() {
                   className="object-cover"
                 />
               </div>
-              {/* $35 Value Sticker - top right corner of pass */}
-              <div className="absolute -top-3 -right-3 z-10 rotate-12 animate-pulse">
-                <div className="bg-gradient-to-br from-amber-400 to-orange-500 text-gray-900 rounded-full w-24 h-24 flex flex-col items-center justify-center shadow-xl border-4 border-white">
-                  <span className="font-bold text-lg leading-tight">$35</span>
-                  <span className="text-[10px] font-semibold uppercase tracking-wider">Value</span>
-                  <span className="text-[9px] font-bold uppercase">Yours FREE</span>
-                </div>
-              </div>
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-purple-200 rounded-2xl -z-10" />
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-amber-200 rounded-full -z-10" />
             </div>
           </div>
         </div>
