@@ -273,7 +273,7 @@ export default function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <img src={`${BASE}/images/word-bounce-house.png`} alt="" width={300} height={150} className="w-2/3 h-auto drop-shadow-lg" />
+                    <img src={`${BASE}/images/word-bounce-house.png`} alt="" width={300} height={150} className="w-11/12 h-auto drop-shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:drop-shadow-2xl" />
                   </div>
                 </div>
               </div>
@@ -291,7 +291,7 @@ export default function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <img src={`${BASE}/images/word-face-painting.png`} alt="" width={300} height={150} className="w-2/3 h-auto drop-shadow-lg" />
+                    <img src={`${BASE}/images/word-face-painting.png`} alt="" width={300} height={150} className="w-11/12 h-auto drop-shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:drop-shadow-2xl" />
                   </div>
                 </div>
               </div>
@@ -341,7 +341,7 @@ export default function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <img src={`${BASE}/images/word-touch-a-truck.png`} alt="" width={300} height={150} className="w-2/3 h-auto drop-shadow-lg" />
+                    <img src={`${BASE}/images/word-touch-a-truck.png`} alt="" width={300} height={150} className="w-11/12 h-auto drop-shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:drop-shadow-2xl" />
                   </div>
                 </div>
               </div>
@@ -359,7 +359,7 @@ export default function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <img src={`${BASE}/images/word-prizes-raffles.png`} alt="" width={300} height={150} className="w-2/3 h-auto drop-shadow-lg" />
+                    <img src={`${BASE}/images/word-prizes-raffles.png`} alt="" width={300} height={150} className="w-11/12 h-auto drop-shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:drop-shadow-2xl" />
                   </div>
                 </div>
               </div>
@@ -393,7 +393,7 @@ export default function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <img src={`${BASE}/images/word-tiny-town.png`} alt="" width={300} height={150} className="w-2/3 h-auto drop-shadow-lg" />
+                    <img src={`${BASE}/images/word-tiny-town.png`} alt="" width={300} height={150} className="w-11/12 h-auto drop-shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:drop-shadow-2xl" />
                   </div>
                 </div>
               </div>
@@ -444,7 +444,7 @@ export default function HomePage() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <img src={`${BASE}/images/word-entertainment.png`} alt="" width={300} height={150} className="w-2/3 h-auto drop-shadow-lg" />
+                    <img src={`${BASE}/images/word-entertainment.png`} alt="" width={300} height={150} className="w-11/12 h-auto drop-shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:drop-shadow-2xl" />
                   </div>
                 </div>
               </div>
@@ -538,7 +538,7 @@ export default function HomePage() {
                         alt=""
                         width={200}
                         height={100}
-                        className="w-3/4 h-auto drop-shadow-lg"
+                        className="w-11/12 h-auto drop-shadow-lg transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
                   )}
