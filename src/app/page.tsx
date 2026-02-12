@@ -300,7 +300,7 @@ export default function HomePage() {
                   Included with Registration
                 </div>
                 <h3 className="text-3xl font-bold text-gray-900 font-serif mb-4">
-                  Professional Face Painting
+                  Transform Into Anything
                 </h3>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                   Our talented artists will transform your kids into their favorite characters, animals, and superheroes. From butterflies to tigers — every design is a masterpiece.
@@ -320,7 +320,7 @@ export default function HomePage() {
                   Free - Open to All
                 </div>
                 <h3 className="text-3xl font-bold text-gray-900 font-serif mb-4">
-                  Touch-A-Truck
+                  Climb In & Explore
                 </h3>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                   Kids get up close with fire trucks, police cars, construction equipment, and more! Climb in, honk the horn, and explore real vehicles. Complete your punch card by visiting every truck for a chance to win a Giant Tonka Set!
@@ -402,7 +402,7 @@ export default function HomePage() {
                   Requires Activity Ticket
                 </div>
                 <h3 className="text-3xl font-bold text-gray-900 font-serif mb-4">
-                  Tiny Town - Ages 2-4
+                  Built for Little Ones (Ages 2-4)
                 </h3>
                 <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                   A dedicated soft-play zone designed just for your littlest ones. Featuring mini bounce houses, a giant corn box, and a Tonka truck sandbox - safe, shaded, and perfectly sized.
