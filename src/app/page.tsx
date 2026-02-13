@@ -41,11 +41,11 @@ export default function HomePage() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <a href="https://www.candlelighthomes.com/firefly-vision" className="flex-shrink-0" target="_blank" rel="noopener noreferrer">
-            <img src={`${BASE}/images/candlelight-homes-logo.png`}
+            <img src={scrolled ? `${BASE}/images/candlelight-homes-logo.png` : `${BASE}/images/candlelight-homes-logo-white.png`}
               alt="Candlelight Homes"
               width={220}
               height={55}
-              className="h-12 w-auto"
+              className="h-12 w-auto transition-opacity duration-300"
             />
           </a>
           <div className="hidden md:flex items-center gap-8">
@@ -249,10 +249,10 @@ export default function HomePage() {
                 <div className="inline-block px-3 py-1 bg-amber-100 text-amber-600 text-sm font-medium rounded-full mb-4">
                   🎟️ Raffle Tickets
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 font-serif mb-4">
+                <h3 className="text-4xl font-bold text-gray-900 font-serif mb-4">
                   Win Big All Day Long
                 </h3>
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                   Every hour, we're giving away $1,000! Plus, complete your Creation Station punch pass for a chance to win a FREE trip to Disneyland. The more you play, the more chances to win.
                 </p>
                 <ul className="space-y-2 text-gray-600">
@@ -297,10 +297,10 @@ export default function HomePage() {
                 <div className="inline-block px-3 py-1 bg-orange-100 text-orange-600 text-sm font-medium rounded-full mb-4">
                   Requires Activity Ticket
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 font-serif mb-4">
+                <h3 className="text-4xl font-bold text-gray-900 font-serif mb-4">
                   Utah's Largest Bounce Village
                 </h3>
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                   An entire inflatable playground featuring massive slides, obstacle courses, and bounce houses for all ages. This action-packed zone will keep kids jumping with joy all day.
                 </p>
                 <ul className="space-y-2 text-gray-600">
@@ -317,10 +317,10 @@ export default function HomePage() {
                 <div className="inline-block px-3 py-1 bg-purple-100 text-purple-600 text-sm font-medium rounded-full mb-4">
                   Requires Activity Ticket
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 font-serif mb-4">
+                <h3 className="text-4xl font-bold text-gray-900 font-serif mb-4">
                   Built for Little Ones (Ages 2-4)
                 </h3>
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                   A dedicated soft-play zone designed just for your littlest ones. Featuring mini bounce houses, a giant corn box, and a Tonka truck sandbox - safe, shaded, and perfectly sized.
                 </p>
                 <ul className="space-y-2 text-gray-600">
@@ -365,10 +365,10 @@ export default function HomePage() {
                 <div className="inline-block px-3 py-1 bg-violet-100 text-violet-600 text-sm font-medium rounded-full mb-4">
                   Free - Open to All
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 font-serif mb-4">
+                <h3 className="text-4xl font-bold text-gray-900 font-serif mb-4">
                   Live Shows All Day
                 </h3>
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                   Non-stop family entertainment all day on our main stage. From dazzling magic shows to incredible acrobats and jugglers, there's always something amazing happening.
                 </p>
                 <ul className="space-y-2 text-gray-600">
@@ -386,10 +386,10 @@ export default function HomePage() {
                 <div className="inline-block px-3 py-1 bg-green-100 text-green-600 text-sm font-medium rounded-full mb-4">
                   Open to All
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 font-serif mb-4">
+                <h3 className="text-4xl font-bold text-gray-900 font-serif mb-4">
                   The Munchyard Food Village
                 </h3>
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                   Fuel your fun at our outdoor food truck roundup, offering a tasty mix of savory meals and sweet desserts. Whether you're craving BBQ, tacos, or gourmet treats, there's something for every appetite.
                 </p>
                 <ul className="space-y-2 text-gray-600">
@@ -419,37 +419,38 @@ export default function HomePage() {
       </section>
 
       {/* Grand Opening Ceremony */}
-      <section className="py-24 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 relative overflow-hidden">
-        <div className="absolute inset-0 confetti-medium opacity-30" />
+      <section className="py-24 relative overflow-hidden bg-slate-900 text-white">
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-900/40 via-slate-900/90 to-slate-900/95" />
+        <div className="absolute inset-0 confetti-medium opacity-15" />
         <div className="max-w-5xl mx-auto px-6 relative z-10">
           <div className="text-center">
             <div className="inline-block px-4 py-2 bg-amber-400/20 rounded-full mb-6">
-              <span className="text-amber-600 font-semibold text-sm tracking-wide uppercase">✨ Special Event</span>
+              <span className="text-amber-400 font-semibold text-sm tracking-wide uppercase">✨ Special Event</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 font-serif mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white font-serif mb-6">
               Grand Opening Ceremony
             </h2>
             <div className="max-w-3xl mx-auto">
-              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+              <p className="text-xl text-white/70 mb-8 leading-relaxed">
                 Join us as we officially open the Firefly community with a special ribbon-cutting,
                 remarks from local leaders, and a sneak peek into the future of Active Family living at Firefly.
               </p>
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-amber-200/50">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-white/20">
                 <div className="grid md:grid-cols-3 gap-6 text-center">
                   <div>
                     <div className="text-3xl mb-2">✂️</div>
-                    <h3 className="font-bold text-gray-900 mb-1">Ribbon Cutting</h3>
-                    <p className="text-gray-600 text-sm">Official community opening</p>
+                    <h3 className="font-bold text-white mb-1">Ribbon Cutting</h3>
+                    <p className="text-white/60 text-sm">Official community opening</p>
                   </div>
                   <div>
                     <div className="text-3xl mb-2">🎤</div>
-                    <h3 className="font-bold text-gray-900 mb-1">Local Leaders</h3>
-                    <p className="text-gray-600 text-sm">Special remarks & welcome</p>
+                    <h3 className="font-bold text-white mb-1">Local Leaders</h3>
+                    <p className="text-white/60 text-sm">Special remarks & welcome</p>
                   </div>
                   <div>
                     <div className="text-3xl mb-2">🏡</div>
-                    <h3 className="font-bold text-gray-900 mb-1">Sneak Peek</h3>
-                    <p className="text-gray-600 text-sm">Future of Active Family living</p>
+                    <h3 className="font-bold text-white mb-1">Sneak Peek</h3>
+                    <p className="text-white/60 text-sm">Future of Active Family living</p>
                   </div>
                 </div>
               </div>
@@ -477,6 +478,7 @@ export default function HomePage() {
               { image: `${BASE}/images/bg-performers.mp4`, title: 'Character Meet & Greet', desc: 'Elsa, Anna, Belle, Spiderman, Mario, Bluey & more!', tag: 'Free', isVideo: true, wordOverlay: `${BASE}/images/word-performers.png` },
               { image: `${BASE}/images/bg-train-rides.mp4`, title: '🚂 Firefly Express', desc: 'Trackless train ride through the festival grounds', tag: 'Ticket', isVideo: true, wordOverlay: `${BASE}/images/word-train-rides.png` },
               { image: `${BASE}/images/bg-music-singalongs.mp4`, title: 'Music & Singalongs', desc: 'Family-friendly tunes all day', tag: 'Free', isVideo: true, wordOverlay: `${BASE}/images/word-music-singalongs.png` },
+              { image: `${BASE}/images/bg-crafts-for-kids.mp4`, title: 'Sidewalk Chalk Art', desc: 'Family chalk competition — draw to win!', tag: 'Free', isVideo: true },
             ].map((item, i) => (
               <div key={i} className={`scroll-reveal stagger-${i + 1} bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group`}>
                 <div className="aspect-[4/3] relative overflow-hidden">
@@ -571,6 +573,30 @@ export default function HomePage() {
               <div className="w-4 h-4 rounded bg-pink-400"></div>
               <span className="text-gray-600">Services</span>
             </div>
+          </div>
+
+          {/* Google Maps Embed */}
+          <div className="mt-12 rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.5!2d-112.0896!3d40.3144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDE4JzUxLjgiTiAxMTLCsDA1JzIyLjYiVw!5e0!3m2!1sen!2sus!4v1707700000000"
+              width="100%"
+              height="350"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Firefly Fam Fest Location"
+            />
+          </div>
+          <div className="mt-4 text-center">
+            <a
+              href="https://maps.google.com/?q=Firefly+Community+Eagle+Mountain+Utah"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold transition-colors"
+            >
+              <MapPin className="w-5 h-5" /> Get Directions →
+            </a>
           </div>
         </div>
       </section>
