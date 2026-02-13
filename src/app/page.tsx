@@ -107,8 +107,8 @@ export default function HomePage() {
                     FREE PASS
                   </span>
                 </h1>
-                {/* $35 Value Sticker - Firefly logo style, positioned to barely cover the S */}
-                <div className="absolute top-0 -right-2 md:top-1 md:-right-4 lg:top-2 lg:-right-6 z-20 rotate-12">
+                {/* $35 Value Sticker - Firefly logo style, top right corner above the S */}
+                <div className="absolute -top-12 -right-2 md:-top-14 md:-right-4 lg:-top-16 lg:-right-6 z-20 rotate-12">
                   <div 
                     className="relative w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 flex flex-col items-center justify-center"
                     style={{ fontFamily: "'Fredoka', sans-serif" }}
